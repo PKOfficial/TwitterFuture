@@ -16,14 +16,7 @@ class GetFileAndDirectoryCount {
   def getCount(dir:String):Future[Int]={
 
     val file = new File(dir)
-    println()
-    println()
-    println()
-    println("File  = "+file+" :::"+ file.exists()+" and "+ file.isDirectory+" count: "+file.listFiles.toList.length)
-    println()
-    println()
-    println()
-
+    
     require(file.exists() && file.isDirectory)
 
     val future:Future[Int]=Future {
